@@ -1,0 +1,75 @@
+/* Ensure the header is dark and fixed */
+.header_outer_container {
+    background-color: #141414;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Container that holds both left and right sections */
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* LEFT SECTION */
+  .header_left ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header_left li {
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .header_left li:hover {
+    color: #e50914; /* Netflix red */
+  }
+  
+  /* Netflix logo should not stretch the list */
+  .header_left img {
+    max-height: 40px;
+  }
+  
+  /* RIGHT SECTION */
+  .header_right ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+  }
+  
+  .header_right li {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .header_right li:hover {
+    color: #e50914;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .header_left li:nth-child(n+3) {
+      display: none; /* Hide less important menu items */
+    }
+  
+    .header_right li {
+      font-size: 20px;
+    }
+  
+    .header_left img {
+      width: 80px;
+    }
+  }
+  
