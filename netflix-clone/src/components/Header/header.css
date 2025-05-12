@@ -1,11 +1,21 @@
 /* Ensure the header is dark and fixed */
-.header_outer_container {
+/* .header_outer_container {
     background-color: #141414;
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
+  } */
+
+  .header_outer_container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Make sure the header is on top of the content */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent header */
   }
+   
   
   /* Container that holds both left and right sections */
   .header_container {
