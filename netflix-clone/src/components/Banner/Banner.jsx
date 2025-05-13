@@ -20,7 +20,6 @@ export default function Banner() {
                         Math.floor(Math.random() * request.data.results.length)
                     ]
                 );
-                // Removed logging here as it may not reflect the updated state
             } catch (error) {
                 console.log("error",error)
             }
@@ -28,7 +27,7 @@ export default function Banner() {
     },[])
 
     useEffect(() => {
-        console.log("movie",movie); // Log the movie state after it updates
+        console.log("movie",movie); 
     }, [movie])
 
     function truncate(str,n){
