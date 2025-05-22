@@ -13,7 +13,7 @@ export default function Row({title, fetchUrl, isLargeRow}) {
             try {
                 const request = await axios.get(fetchUrl);
                 setMovie(request.data.results);
-                console.log(request.data.results);
+                // console.log(request.data.results);
             } catch (error) {
                 console.log("error",error)
             }
@@ -29,11 +29,11 @@ const handleClick = (movie) => {
         movieTrailer(movie?.title || movie?.name || movie?.original_name || '')
             .then((url) => {
                 if (url) {
-                    console.log("youtube url",url)
+                    // console.log("youtube url",url)
                     const urlParams = new URLSearchParams(new URL(url).search);
-                    console.log(urlParams)
+                    // console.log(urlParams)
                     const trailer = urlParams.get('v');
-                    console.log(trailer)
+                    // console.log(trailer)
                     setMovieTrailerUrl(trailer);
                 } else {
                     console.error('No trailer found for this movie');

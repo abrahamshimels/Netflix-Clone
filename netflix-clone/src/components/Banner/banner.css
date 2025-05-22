@@ -51,7 +51,10 @@
     background-color: rgba(51, 51, 51, 0.5);
     transition: all 0.3s ease;
   }
-  
+  .play{
+    background-color: #e6e6e6;
+    color: #000;
+  }
   .banner__button:hover {
     background-color: #e6e6e6;
     color: #000;
